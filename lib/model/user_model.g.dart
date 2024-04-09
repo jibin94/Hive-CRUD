@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'userModel.dart';
+part of 'user_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
@@ -17,8 +17,8 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return UserModel()
-      ..user_id = fields[0] as String
-      ..user_name = fields[1] as String
+      ..userId = fields[0] as String
+      ..userName = fields[1] as String
       ..email = fields[2] as String;
   }
 
@@ -27,9 +27,9 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
     writer
       ..writeByte(3)
       ..writeByte(0)
-      ..write(obj.user_id)
+      ..write(obj.userId)
       ..writeByte(1)
-      ..write(obj.user_name)
+      ..write(obj.userName)
       ..writeByte(2)
       ..write(obj.email);
   }

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class genTextFormField extends StatelessWidget {
-  TextEditingController controller;
-  String hintName;
-  IconData iconData;
-  TextInputType textInputType;
+class CustomTextFormField extends StatelessWidget {
+  final TextEditingController controller;
+  final String hintName;
+  final IconData iconData;
+  final TextInputType textInputType;
 
-  genTextFormField(
-      {required this.controller,
+  const CustomTextFormField(
+      {super.key,
+      required this.controller,
       required this.hintName,
       required this.iconData,
       this.textInputType = TextInputType.text});

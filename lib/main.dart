@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:hive_task_manager/Model/userModel.dart';
+import 'package:hive_task_manager/Model/user_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'Pages/HiveDBPage.dart';
+import 'Pages/home_page.dart';
 
-///flutter packages pub run build_runner build --delete-conflicting-outputs
-///git clone https://<username>:<githubtoken>@github.com/<username>/<repositoryname>.git
+///flutter clean
+///dart run build_runner doctor
+///dart run build_runner build --delete-conflicting-outputs
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   Hive.registerAdapter(UserModelAdapter());
-  await Hive.openBox<UserModel>('users');
+  await Hive.openBox<UserModel>('hive_users');
   runApp(const MyApp());
 }
 
@@ -21,7 +22,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hive DB CRUD',
       home: HiveDBPage(),
     );
   }
