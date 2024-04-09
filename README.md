@@ -12,8 +12,8 @@ Hive is a lightweight and fast NoSQL database that can be used to store data in 
 we also need to add hive_generator and build_runner to the dev dependencies:
 ```
     dev_dependencies:
-    hive_generator: ^2.0.0
-    build_runner: ^2.3.3
+    hive_generator: ^version
+    build_runner: ^version
 ```
 
 Next, we need to initialize Hive in the main() function of our Flutter application. We can do this by calling the Hive.initFlutter() method as shown below:
